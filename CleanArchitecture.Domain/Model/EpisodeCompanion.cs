@@ -1,11 +1,10 @@
-﻿namespace DoctorWho.Db.Model
+﻿namespace CleanArchitecture.Domain.Model;
+
+public class EpisodeCompanion
 {
-    public class EpisodeCompanion
-    {
-        public int Id { get; set; }
-        public int EpisodeId { get; set; }
-        public int CompanionId { get; set; }
-        public Episode Episode { get; set; }
-        public Companion Companion { get; set; }
-    }
+    public int Id { get; set; }
+    public int EpisodeId { get; set; }
+    public int CompanionId { get; set; }
+    public Episode Episode { get; set; }
+    public Companion Companion { get; set; }
 }

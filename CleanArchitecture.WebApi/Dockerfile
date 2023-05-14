@@ -5,7 +5,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["CleanArchitecture.WebApi/CleanArchitecture.WebApi.csproj", "CleanArchitecture.WebApi/"]
+COPY ["../CleanArchitecture.WebApi/CleanArchitecture.WebApi.csproj", "../CleanArchitecture.WebApi/"]
 RUN dotnet restore "CleanArchitecture.WebApi/CleanArchitecture.WebApi.csproj"
 COPY . .
 WORKDIR "/src/CleanArchitecture.WebApi"
