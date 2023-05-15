@@ -8,9 +8,9 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
-        var asssemblies = typeof(DependencyInjection).Assembly;
-        services.AddMediatR(configuration => configuration.RegisterServicesFromAssembly(asssemblies));
-        services.AddValidatorsFromAssembly(asssemblies);
+        var assemblies = typeof(DependencyInjection).Assembly;
+        services.AddMediatR(configuration => configuration.RegisterServicesFromAssembly(assemblies));
+        services.AddValidatorsFromAssembly(assemblies);
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         
